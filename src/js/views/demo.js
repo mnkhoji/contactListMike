@@ -6,16 +6,18 @@ import { Context } from "../store/appContext";
 import "../../styles/demo.css";
 import { Card } from "../component/card.jsx";
 import { FormController } from "../component/formController.jsx";
+import { PopUp } from "../component/popUp.jsx";
 
 export const Demo = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
 		<div className="container">
-			<button onClick="myFunction()">Add a contact to your list</button>
+			<button onClick={() => setShow(!show)}>Add a contact to your list</button>
+			
 			<script>
   {function myFunction() {
-    alert(<FormController/>)
+    PopUp()
   }}
 </script>
 			<ul className="list-group">
