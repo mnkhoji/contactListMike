@@ -12,7 +12,7 @@ export const Demo = () => {
 
 	return (
 		<div className="container">
-			<Link onclick="myFunction()">Add a contact to your list</Link>
+			<button onClick="myFunction()">Add a contact to your list</button>
 			<script>
   {function myFunction() {
     alert(<FormController/>)
@@ -21,7 +21,7 @@ export const Demo = () => {
 			<ul className="list-group">
 				{store.demo.map((item, index) => {
 					return (
-						<li>
+						<li key={index}>
 							<Card/>
 						</li>
 					);
